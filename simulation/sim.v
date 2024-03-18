@@ -23,7 +23,7 @@ initial begin
     clk_reg = 1;
     forever
         begin
-            #1
+            #5
             clk_reg = ~clk_reg;
         end
 end
@@ -52,7 +52,6 @@ end
 
 always @(negedge out_busy)
     begin
-        # 2
         $display("a = 0x%h, b = 0x%h, output: 0x%h", i, j, out);
     end
 
