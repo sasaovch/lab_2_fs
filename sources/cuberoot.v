@@ -1,11 +1,11 @@
 module cuberoot(
-    input clk_i, //click
-    input rst_i, //reset
-    input [7:0] a_i, //input
-    input start_i, //start
-    output wire busy_o, //is buisy now
+    input clk_i,
+    input rst_i,
+    input [7:0] a_i,
+    input start_i, 
+    output wire busy_o,
     output reg [3:0] y_bo
-); //output value 255^(1/3) fits only 4 bits
+);
 
 localparam IDLE = 0,
            WORK = 1,
