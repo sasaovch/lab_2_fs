@@ -7,10 +7,12 @@ module mltp(
     input [7:0] b_bi,
     input start_i,
     output busy_o,
-    output reg [15:0] y_bo);
+    output reg [15:0] y_bo
+);
 
 localparam IDLE = 1'b0;
 localparam WORK = 1'b1;
+
 reg [2:0] ctr;
 wire [2:0] end_step;
 wire [7:0] part_sum;

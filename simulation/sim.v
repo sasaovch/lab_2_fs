@@ -43,8 +43,7 @@ initial begin
                 start = 1;
                 # 5
                 start = 0;
-                # 500
-                start = 0;
+                # 2500
             end
         end
     end
@@ -52,6 +51,7 @@ end
 
 always @(negedge out_busy)
     begin
+        #2
         $display("a = 0x%h, b = 0x%h, output: 0x%h", i, j, out);
     end
 
